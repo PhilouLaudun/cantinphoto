@@ -10,14 +10,14 @@ const Navigation = () => {
             to="/"
             className={(navdata) => (navdata.isActive ? "navactive" : "")}
           >
-            <li>Acceuil</li>
+            <li style={{ padding: "20px"}}>Acceuil</li>
           </NavLink>
           <NavLink
             end
             to="/PortFolio"
             className={(navdata) => (navdata.isActive ? "navactive" : "")}
           >
-            <li>portfolio</li>
+            <li>Portfolio</li>
           </NavLink>
           <NavLink
             end
