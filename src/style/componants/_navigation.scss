@@ -1,29 +1,30 @@
 .navigation {
   position: absolute;
   top: 1rem;
-  left: 1.4rem;
+  left: 1rem;
   font-size: 1.4rem;
-  line-height: 30px;
+  line-height: 32px;
   z-index: +10;
 
 
    &::before {
     content: '';
     position: absolute;
-    height: 320px;
-    width: 320px;
+    height: 300px;
+    width: 300px;
     background: $color-3;
+    opacity: 0.75;
     border-radius: 50%;
     top: -150px;
-    left: -160px;
+    left: -110px;
     z-index: -1;
     animation: navAnim 15s infinite alternate;
     @keyframes navAnim {
       50% {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
       100% {
-        transform: scale(1);
+        transform: scale(0.9);
       }
     }
 }
@@ -31,7 +32,8 @@
 .navactive {
     color: $black;
     font-size: 2rem;
-    animation: clignote 1s linear infinite;
+    font-style: italic;
+    animation: clignote 3s linear infinite;
     @keyframes clignote {
         50% {color: $color-2;}
     }
@@ -39,7 +41,7 @@
     }
     
 ul:hover li:not(:hover) {
-    opacity: .5;
+    opacity: .4;
   }
 ul:hover li:hover {
   color: $black;
