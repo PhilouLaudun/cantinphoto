@@ -1,0 +1,64 @@
+.contact {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+   .contact-infos {
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    display: grid;
+    grid-template-rows: repeat(4, 23%) 12%;
+    height: 50%;
+    width: 40%;
+    max-width: 500px;
+    grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-areas: 
+        '. . a a '
+        '. b b .'
+        'c c . .';
+
+     h4 {
+      color: $color-4;
+      font-size: 1.8rem;
+      font-weight: 200;
+      margin-bottom: 10px;
+    } 
+    p {
+      font-size: 1.5rem;
+    }
+    .email .content p,.phone .content p {
+      transition: 0.25s;
+        &:hover {
+          transform: translateX(5px);
+        }
+    }
+    .address {
+      width: auto;
+      grid-area: a;
+      
+    }
+    .phone {
+      //position: relative;
+      width: auto;
+      overflow:visible;
+      grid-area: b;
+    }
+    .email {
+       grid-area: c;
+    }
+
+
+
+   }
+
+
+  
+
+
+
+
+
+
+}
