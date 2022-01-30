@@ -11,7 +11,6 @@ const Contact = () => {
         <Navigation />
         <Logo />
         <SocialNetworks />
-        
         <ContactForm />
         <div className="contact-infos">
           <div className="address">

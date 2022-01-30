@@ -33,11 +33,11 @@ const ContactForm = () => {
     };
     
     if (name && isEmail() && message) {
-      const templateId = "dhfh";
+      const templateId = 'template_19udd2q';
       
-      nameS.classList.remove("error");
-      emailS.classList.remove("error");
-      messageS.classList.remove("error");
+      nameS.classList.remove("red");
+      emailS.classList.remove("red");
+      messageS.classList.remove("red");
 
       sendFeedback(templateId, {
         name,
@@ -70,9 +70,10 @@ const ContactForm = () => {
     let formMess = document.querySelector(".form-message");
     
     window.emailjs
-      .send("gmail", templateId, variables)
+      .send('service_3b23au8', templateId, variables)
       .then((res) => {
-        formMess.innerHTML ="Message envoyé ! Je vous contacterez dès que possible.";
+        formMess.innerHTML =
+          "Message envoyé ! Je vous contacterez dès que possible.";
         formMess.style.background = "#00c1ec";
         formMess.style.opacity = "1";
 
@@ -88,16 +89,15 @@ const ContactForm = () => {
           formMess.style.opacity = "0";
         }, 5000);
       })
-      .catch(
-        (err) => {
-      
-          formMess.innerHTML = "Une erreur s'est produite, veuillez réessayer.";
-          formMess.style.background = "rgb(253, 87, 87)";
-          formMess.style.opacity = "1";
-          setTimeout(() => {
-            formMess.style.opacity = "0";
-          }, 2000);
-        })
+      .catch((err) => {
+        console.log("failed...", err);
+        formMess.innerHTML = "Une erreur s'est produite, veuillez réessayer.";
+        formMess.style.background = "rgb(253, 87, 87)";
+        formMess.style.opacity = "1";
+        setTimeout(() => {
+          formMess.style.opacity = "0";
+        }, 2000);
+      });
   };
 
   return (
