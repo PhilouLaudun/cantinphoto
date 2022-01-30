@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../componants/Navigation';
 import Logo from '../componants/Logo';
-import { SocialNetworks } from '../componants/SocialNetworks';
+import SocialNetworks from '../componants/SocialNetworks';
 
 const Home = () => {
   return (

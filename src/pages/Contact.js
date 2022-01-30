@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from '../componants/Logo';
 import Navigation from '../componants/Navigation';
+import SocialNetworks from '../componants/SocialNetworks'
+import ContactForm from '../componants/ContactForm'
 
 const Contact = () => {
   return (
@@ -8,6 +10,9 @@ const Contact = () => {
       <div className="contact">
         <Navigation />
         <Logo />
+        <SocialNetworks />
+        
+        <ContactForm />
         <div className="contact-infos">
           <div className="address">
             <div className="content">

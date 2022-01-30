@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const SocialNetworks = () => {
+const SocialNetworks = () => {
 
 
 
@@ -34,3 +34,4 @@ export const SocialNetworks = () => {
         </div> 
     );
 };
+export default SocialNetworks;
