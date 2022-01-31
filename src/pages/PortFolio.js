@@ -1,12 +1,14 @@
 import React from 'react';
 import Logo from '../componants/Logo';
 import Navigation from '../componants/Navigation';
+import SocialNetworks from '../componants/SocialNetworks'
 
 const PortFolio = () => {
   return (
        <main>
       <Navigation />
-      <Logo/>
+      <Logo />
+      <SocialNetworks />
       <div>
         
       <h1> Page PortFolio</h1>
