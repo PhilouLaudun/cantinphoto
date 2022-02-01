@@ -8,7 +8,7 @@ export const PriceData = [
   },
   {
     id: 2,
-    title: "Pour deux",
+    title: "Nous deux",
     prix: "195€",
     infos: "Séance pour deux personnes, en extérieur ou en studio.",
     img: "./assets/img/prices/couple.jpg",

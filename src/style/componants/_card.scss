@@ -1,25 +1,87 @@
+.logo {
+  bottom: 1%;
+}
 .card {
   flex: 1 0 25%;
   min-width: 260px;
   max-width: 400px;
-  height: 400px;
+  z-index: 10;
+  &:hover {
+    border: thick double #32a1ce;
+    animation: secouer 2s;
+    box-shadow: 10px 5px 5px $color-4;
+    @keyframes secouer {
+     // 0% {transform: translateX(0px) translateY(0) };
+      50% {transform: translateX(10px) translateY(-10px)};
+      //100% {transform: translateX(0px) translateY(0)};
+    }
+  }
+  height: 350px;
   background: $color-1;
   border-radius: 35px;
   margin: 5px;
-  padding: 26px 15px 30px;
   position: relative;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-    
+
   img {
-    position: absolute;
-    width: 80%;
-    height: 200px;
+    width: 100%;
+    height: 70%;
     object-fit: cover;
     object-position: top;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50px;
-    box-shadow: 0 8px 1px rgba(255, 255, 255, 0.1),
-      0 16px 1px rgba(255, 255, 255, 0.05);
+  }
+
+  h1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: $color-2;
+    font-size: 1.8rem;
+    font-weight: 800;
+    width: 100%;
+    animation: apparition 2s;
+  }
+  .card-text {
+    //position: absolute;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 100px;
+    grid-template-areas: "a b";
+    
+
+    h2 {
+      grid-area: b;
+      display: flex;
+      color: $color-4;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      animation: apparition 4s;
+
+      @keyframes apparition {
+          from {transform: scale(0)};
+          to {transform: scale(1)};
+      }
+      
+    }
+    h3 {
+      grid-area: a;
+      display: flex;
+      color: $color-2;
+      font-size: 0.9rem;
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation : deroul 4s;
+
+      @keyframes deroul {
+        from {transform: translateX(-400px)};
+        to {transform: translateX(0)};
+        
+      }
+    }
   }
 }

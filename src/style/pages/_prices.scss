@@ -34,13 +34,12 @@
 .content {
     position: absolute;
     top: 5%;
-    left: 5%;
+    left: 10%;
+    right:10%;
     width : 85%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    //margin-left: 10%;
-    //margin-top:10%;
+    justify-content: space-around;
     
 }
 }
