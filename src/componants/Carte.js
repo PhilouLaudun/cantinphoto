@@ -9,12 +9,11 @@ const Carte = (props) => {
 
 
   return (
-    <div>
+    <div className="card">
       <h1>{carte.title} </h1>
-        <p>{carte.date}</p>
-
-
-
+      <p>{carte.prix}</p>
+      <p>{carte.infos}</p>
+      <img src={carte.img} alt={carte.title} />
     </div>
   ); 
 };

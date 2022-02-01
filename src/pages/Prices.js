@@ -17,6 +17,10 @@ const Prices = () => {
         <div className="content">
           <Carte carteNumber={0} />
           <Carte carteNumber={1} />
+          <Carte carteNumber={2} />
+          <Carte carteNumber={3} />
+          <Carte carteNumber={4} />
+          <Carte carteNumber={5} />
         </div>
       </div>
     </main>
