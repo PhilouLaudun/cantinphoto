@@ -45,7 +45,7 @@ body {
   height: 100vh;
   background-color: $color-1;
   color: $black;
-  overflow: hidden;
+  //overflow: hidden;
 
   @media screen and (max-width: 430px){
     position: relative;

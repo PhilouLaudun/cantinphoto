@@ -5,6 +5,7 @@ const Carte = (props) => {
   const [currentCard] = useState(PriceData);
   const carte = currentCard[props.carteNumber];
 
+
   return (
     <div className="card">
       <img src={carte.img} alt={carte.title} />
