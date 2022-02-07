@@ -10,21 +10,21 @@ const Navigation = () => {
             to="/"
             className={(navdata) => (navdata.isActive ? "navactive" : "")}
           >
-            <li style={{ "paddingLeft": "35px" }}>Acceuil</li>
+            <li style={{ paddingLeft: "35px" }}>Acceuil</li>
           </NavLink>
           <NavLink
             end
             to="/PortFolio"
             className={(navdata) => (navdata.isActive ? "navactive" : "")}
           >
-            <li style={{ "paddingLeft": "25px" }}>Portfolio</li>
+            <li style={{ paddingLeft: "25px" }}>Portfolio</li>
           </NavLink>
           <NavLink
             end
             to="/price"
             className={(navdata) => (navdata.isActive ? "navactive" : "")}
           >
-            <li style={{ "paddingLeft": "15px" }}>Prestations</li>
+            <li style={{ paddingLeft: "15px" }}>Prestations</li>
           </NavLink>
           <NavLink
             end
@@ -32,6 +32,13 @@ const Navigation = () => {
             className={(navdata) => (navdata.isActive ? "navactive" : "")}
           >
             <li>Contact</li>
+          </NavLink>
+          <NavLink
+            end
+            to="/test"
+            className={(navdata) => (navdata.isActive ? "navactive" : "")}
+          >
+            <li>Test</li>
           </NavLink>
         </ul>
       </div>

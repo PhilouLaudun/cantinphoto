@@ -12,8 +12,10 @@
     animation: secouer 2s;
     box-shadow: 10px 5px 5px $color-4;
     @keyframes secouer {
-     // 0% {transform: translateX(0px) translateY(0) };
-      50% {transform: translateX(10px) translateY(-10px)};
+      // 0% {transform: translateX(0px) translateY(0) };
+      50% {
+        transform: translateX(10px) translateY(-10px);
+      }
       //100% {transform: translateX(0px) translateY(0)};
     }
   }
@@ -50,7 +52,6 @@
     grid-template-columns: 75% 25%;
     grid-template-rows: 100px;
     grid-template-areas: "a b";
-    
 
     h2 {
       grid-area: b;
@@ -63,10 +64,13 @@
       animation: apparition 4s;
 
       @keyframes apparition {
-          from {transform: scale(0)};
-          to {transform: scale(1)};
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
       }
-      
     }
     h3 {
       grid-area: a;
@@ -77,15 +81,17 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      
-      animation : deroul 0.5s;
+
+      animation: deroul 2s;
       animation-iteration-count: 1;
       @keyframes deroul {
-        from {transform: translateX(-400px)};
-        to {transform: translateX(0)};
-        
+        from {
+          transform: translateX(-400px);
+        }
+        to {
+          transform: translateX(0);
+        }
       }
-
     }
   }
 }
