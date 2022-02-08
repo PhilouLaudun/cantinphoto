@@ -1,14 +1,14 @@
 import React from 'react';
 import Carte from '../componants/Carte';
 import Logo from '../componants/Logo';
-import Navigation from "../componants/Navigation";
+import Navigations from "../componants/Navigations";
 import SocialNetworks from '../componants/SocialNetworks';
 
 const Prices = () => {
   return (
     <main>
       <div className="prestation">
-        <Navigation />
+        <Navigations />
         <Logo />
         <SocialNetworks />
         <div className="bg"></div>

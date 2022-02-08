@@ -1,24 +1,41 @@
 .test {
   position: relative;
   height: 100vh;
+  width: 100vw;
+}
+.bgport {
+  background: linear-gradient(-45deg, $color-1, $color-2, $color-3, $color-4);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+.gridcase {
+  display: grid;
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
 
-  .grid {
-      display: grid;
-      height: 200pxn;
-      grid-template-columns: 20% 1fr;
-      grid-template-rows: 10% 60% 30%;
-      grid-template-areas: 
-      "a b"
-      "a c"
-      "d d"
-      ;
-
-
-
-
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 10% 60% 25%;
+  grid-template-areas:
+    "a b"
+    "a c"
+    "d d";
+}
 .swiper {
   width: 100%;
-  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .swiper-slide {
@@ -30,56 +47,54 @@
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  //align-items: center;
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
   object-fit: cover;
+  overflow: hidden;
 }
-
-
-.swiper {
-  width: 100%;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .swiper-slide {
   background-size: cover;
   background-position: center;
 }
 
 .mySwiper2 {
-    grid-area: c;
-  height: 80%;
+  grid-area: c;
+  height: 100%;
   width: 100%;
+  padding-bottom: 1%;
+  .swiper-slide {
+    background: rgba(
+      $color: #000000,
+      $alpha: 0
+    ); // permet de supprimer la couleur de fond
+    img {
+      height: 100%;
+      width: auto;
+      border-radius: 20px;
+    }
+  }
 }
 
 .mySwiper {
-    grid-area: d;
-  height: 20%;
+  grid-area: d;
   box-sizing: border-box;
   padding: 10px 0;
+  .swiper-slide {
+    width: 45%;
+    height: 100%;
+    opacity: 0.4;
+  }
+  .swiper-slide-thumb-active {
+    opacity: 1;
+  }
 }
 
-.mySwiper .swiper-slide {
-  width: 25%;
-  height: 100%;
-  opacity: 0.4;
-}
-
-.mySwiper .swiper-slide-thumb-active {
-  opacity: 1;
-}
-
-.swiper-slide img {
+.mySwiper .mySwiper .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}  }
+  object-fit: fill;
+  overflow: hidden;
 }

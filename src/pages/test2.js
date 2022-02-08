@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
 import { PortfolioData } from "../data/portfolioData";
 
 // Import Swiper React components
@@ -17,8 +17,8 @@ const Test2 = () => {
   const [imageStore] = useState(PortfolioData);
 
   return (
-    <div className="Test">
-      <div className="grid">
+    <main className="test  bgport">
+      <div className="gridcase">
         <Swiper
           style={{
             "--swiper-navigation-color": "#fff",
@@ -27,6 +27,7 @@ const Test2 = () => {
           loop={true}
           spaceBetween={10}
           navigation={true}
+          slidesPerView={2}
           thumbs={{ swiper: thumbsSwiper }}
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper2"
@@ -52,9 +53,9 @@ const Test2 = () => {
               <img src={image.img} key={image.id} alt=" " />
             </SwiperSlide>
           ))}
-        </Swiper>
+      </Swiper>
       </div>
-    </div>
+     </main>
   );
 };
 

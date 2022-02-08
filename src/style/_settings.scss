@@ -14,8 +14,9 @@ $color-1: #f6f5f5;
 $color-2: #1687a7;
 $color-3: #d3e0ea;
 $color-4: #276668;
+$color-5 : #E6E6FA;
 $black: rgb(40, 40, 40);
-$red: rgb(253, 87, 87);
+$red: rgb(61, 197, 197);
 $white: #f3f0f0;
 
 * {
@@ -43,6 +44,7 @@ a:visited {
 body {
   font-family: $font-1;
   height: 100vh;
+  width: 100vw;
   background-color: $color-1;
   color: $black;
   //overflow: hidden;

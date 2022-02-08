@@ -2,7 +2,94 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
+}
+.bgport {
+  background: linear-gradient(-45deg, $color-2, $color-4,  $color-5);
+  background-size: 400% 400%;
+  animation: gradient 15s linear infinite;
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+.gridcase {
+  display: grid;
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
 
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 10% 60% 25%;
+  grid-template-areas:
+    "a b"
+    "a c"
+    "d d";
+}
+.swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 
+  /* Center slide text vertically */
 
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.mySwiper2 {
+  grid-area: c;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 1%;
+  .swiper-slide {
+    background: rgba(
+      $color: #000000,
+      $alpha: 0
+    ); // permet de supprimer la couleur de fond
+    img {
+      height: 100%;
+      width: auto;
+      border-radius: 20px;
+    }
+  }
+}
+.mySwiper {
+  grid-area: d;
+  box-sizing: border-box;
+  padding: 10px 0;
+  .swiper-slide {
+    width: 45%;
+    height: 100%;
+    opacity: 0.4;
+  }
+  .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+}
+.mySwiper .mySwiper .swiper-slide img {
+  display: block;
+  object-fit: fill;
+  overflow: hidden;
 }

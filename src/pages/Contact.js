@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../componants/Logo';
-import Navigation from '../componants/Navigation';
+import Navigations from '../componants/Navigations';
 import SocialNetworks from '../componants/SocialNetworks'
 import ContactForm from '../componants/ContactForm'
 
@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <main>
       <div className="contact">
-        <Navigation />
+        <Navigations />
         <Logo />
         <SocialNetworks />
         <ContactForm />
