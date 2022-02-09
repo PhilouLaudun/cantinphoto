@@ -2,18 +2,15 @@ import React from 'react';
 
 const SocialNetworks = () => {
 
-
-
     return (
         <div className="social-network">
-        
+
         <ul className="content">
           <a
             href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover"
-            //onMouseOver={anim}
           >
             <li>
               <i className="fab fa-facebook-f"></i>
@@ -24,7 +21,6 @@ const SocialNetworks = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover"
-            //onMouseOver={anim}
           >
             <li>
               <i className="fab fa-instagram"></i>

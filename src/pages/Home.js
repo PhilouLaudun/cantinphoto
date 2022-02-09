@@ -15,7 +15,6 @@ const Home = () => {
           <div className="main-content">
             <h1> Charles CANTIN</h1>
             <h2>Photographe</h2>
-            
           </div>
           <h3>Mariage - Grossesse - Bébé - Famille - Baptême - Couple</h3>
         </div> 
