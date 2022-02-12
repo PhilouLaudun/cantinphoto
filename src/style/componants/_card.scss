@@ -5,7 +5,7 @@
   flex: 1 0 25%;
   min-width: 260px;
   max-width: 400px;
-  z-index: 10;
+  //z-index: 10;
   overflow: visible;
   &:hover {
     border: thick double #32a1ce;
@@ -38,12 +38,14 @@
   h1 {
     position: absolute;
     top: 10px;
-    left: 10px;
+    right: 10px;
+    text-align: end;
+    padding-right: 2px;
     color: $color-2;
     font-size: 1.8rem;
     font-weight: 800;
     width: 98%;
-    animation: apparition 2s;
+    //animation: apparition 2s;
   }
   .card-text {
     //position: absolute;
