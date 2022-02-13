@@ -2,22 +2,49 @@
   height: 100vh;
   width: 100vw;
   min-width: 400px;
-  
+  .logo {
+    @media screen and (max-width: 980px) {
+      bottom: 10%;
+      right: 10%;
+    }
+  }
+   .social-network {
+    @media screen and (max-width: 980px) {
+    right: 10%;}
+  }
+    .navigation {
+    @media screen and (max-width: 980px) {
+      font-size: 0.9rem;
+      &::before {
+        height: 200px;
+        width: 200px;
+        top: -60px;
+        left: -70px;
+      }
+      .navactive {
+        font-size: 1.5rem;
+      }
+    }
+    
+  }
 
   .bg-image {
     position: absolute;
     top: 0;
-    left:0;
+    left: 0;
     width: 100%;
     height: 100%;
-   background-image:  url("/assets/img/wedding-1745240_1920.jpg");
+    background-image: url("/assets/img/wedding-1745240_1920.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    
+    //background-position: center;
     opacity: 0.8;
-    z-index: -10; 
-  } 
+    z-index: -10;
+
+    @media screen and (max-width: 980px) {
+      background-position: 25%;
+    }
+  }
 
   .home-main {
     display: grid;
@@ -27,62 +54,94 @@
     width: auto;
     height: 100%;
     overflow: hidden;
-    
-    
+
     .main-content {
       user-select: none;
       justify-items: center;
       text-align: center;
       font-family: $font-1;
-      color: $color-4; 
+      color: $color-4;
       line-height: 100px;
+      width:85%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      
+
       h1 {
         font-size: 5rem;
         animation: fadeIn 3s;
+         @media screen and (max-width: 980px) {
+            font-size: 3rem;
+    }
 
         @keyframes fadeIn {
-          from { opacity:0;
-                font-size:0.2rem;}
-          to    {opacity: 3;}
+          from {
+            opacity: 0;
+            font-size: 0.2rem;
+          }
+          to {
+            opacity: 3;
+          }
         }
       }
       h2 {
         font-family: $font-1;
+        font-size: 3em;
         font-weight: 100;
         animation: fadeIn 6s;
+        @media screen and (max-width: 980px) {
+            font-size: 2em;
+    }
 
         @keyframes fadeIn {
-          from { opacity:0;
-                font-size:0.1rem;}
-          to    {opacity: 3;}
+          from {
+            opacity: 0;
+            font-size: 0.1rem;
+          }
+          to {
+            opacity: 3;
+          }
         }
 
-        @media screen and (max-width: 650px){
-          font-size: 3rem;
+
+      }
+    }
+    h3 {
+      position: absolute;
+      text-align: center;
+      bottom: 5%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    
+      color: $color-1;
+      font-size: 1.5rem;
+      font-weight: bold;
+      animation: 8s appear;
+      opacity: 1;
+
+      @media screen and (max-width: 980px) {
+        font-size: 1rem;
+        width: 80%;
+      }
+
+      @keyframes appear {
+        0% {
+          opacity: 0;
         }
-        @media screen and (min-width: 1200px){
-          font-size: 3.5rem;
+        50% {
+          opacity: 0;
+        }
+        75% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
         }
       }
-      
     }
-  h3 {
-        position: absolute;
-        text-align: center;
-        bottom: 5%;
-        color: $color-4;
-        font-size: 1.5rem;
-        font-weight: bold;
-        animation: 8s  appear;
-        opacity:1;
-
-        @keyframes appear {
-          0% {opacity:0;}
-          50% {opacity:0;}
-          75% {opacity:0.5;}
-          100% {opacity:1;}
-        }
-
-      }}
+  }
 }
-    
