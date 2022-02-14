@@ -2,7 +2,12 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
+  @media screen and (max-width: 1060px) {
+          overflow: auto;;
+  }
+  
   .logo {
+    position: absolute;
     @media screen and (max-width: 1060px) {
       top: 2%;
       left: 45%;
@@ -72,6 +77,7 @@
 
     @media screen and (max-width: 1060px) {
       top: 20%;
+
     }
   }
 }

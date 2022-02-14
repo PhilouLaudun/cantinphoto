@@ -3,6 +3,7 @@
   width: 100vw;
   min-width: 400px;
   .logo {
+    position: absolute;
     @media screen and (max-width: 980px) {
       bottom: 10%;
       right: 10%;
@@ -40,7 +41,7 @@
     background-image: url("/assets/img/wedding-1745240_1920.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    //background-position: center;
+    background-position: center;
     opacity: 0.8;
     z-index: -10;
 
