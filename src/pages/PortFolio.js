@@ -84,10 +84,11 @@ const PortFolio = () => {
     <main>
       <div className="portfolio  bgport">
         <Navigations />
-        <Logo />
+        
         <SocialNetworks />
 
         <div className="gridcase">
+          <Logo />
           <div className="choice">
             <ul>
               {tri.map((tri) => {

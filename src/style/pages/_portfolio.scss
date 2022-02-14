@@ -2,20 +2,23 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
+
   .social-network {
     top: 1%;
-    right: 5%;
+    right: 3%;
     ul {
       display: flex;
       a {
         color: $blacksn;
       }
     }
+    @media screen and (max-width: 1024px){
+      right: 40px;
+      font-size: 1.5rem;
+
+    }
   }
-  .logo {
-    top: 32%;
-    left: 6%;
-  }
+
   .navigation {
     @media screen and (max-width: 1024px) {
       font-size: 0.9rem;
@@ -54,7 +57,8 @@
 .gridcase {
   display: grid;
   height: 100%;
-  width: 95%;
+  width: 100%;
+
   margin: 0 auto;
 
   grid-template-columns: 20% 1fr;
@@ -63,6 +67,29 @@
     "a b"
     "a c"
     "d d";
+    @media screen and (max-width: 950px) {
+      grid-template-columns: 20% 1fr;
+      grid-template-rows: 10% 60% 25%;
+      grid-template-areas:
+    "a b"
+    "a c"
+    "d d";
+    }
+    .logo {
+    position:relative;
+    grid-area:a;
+    align-self: center;
+    justify-self: center;
+
+    @media screen and (max-width: 950px) {
+      position:relative;
+      grid-area:b;
+      align-self: center;
+    justify-self: center;
+        width: 80px;
+    height: 80px;
+    }
+  }
 }
 .choice {
   grid-area: b;
@@ -70,6 +97,14 @@
   justify-items: left;
   align-items: center;
   margin-left: 10%;
+  
+  @media screen and (max-width: 950px) {
+    grid-area: a;
+    align-items: end;
+    margin-bottom: 50%;
+    margin-left: 10px;
+    z-index: 10;
+  }
 
   ul {
     display: flex;
@@ -82,6 +117,20 @@
       transform: translate(-5px, 1px);
     }
     align-items: center;
+
+
+    @media screen and (max-width: 950px) {
+    display:grid;
+    max-width:100px;
+    height: 70%;
+    font-size:0.7rem;
+    justify-self: left;
+    padding: 5px 2px 5px 5px;
+
+    @media screen and (max-width:490px) {
+      font-size:0.5rem;
+    }
+  }
   }
 }
 .swiper {
@@ -115,6 +164,7 @@
   height: 100%;
   width: 100%;
   padding-bottom: 1%;
+  padding-right: 10px;
   .swiper-slide {
     background: rgba(
       $color: #000000,
