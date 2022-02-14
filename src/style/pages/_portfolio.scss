@@ -2,7 +2,6 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-<<<<<<< Updated upstream
 
   .social-network {
     top: 1%;
@@ -13,7 +12,7 @@
         color: $blacksn;
       }
     }
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1080px){
       right: 40px;
       font-size: 1.5rem;
 
@@ -37,22 +36,6 @@
       }
     }
   }
-=======
-  .social-network {
-    top: 1%;
-    ul { 
-     display: flex; 
-      a {
-      color: $blacksn;
-    }
-  }
-
-  }
-  .logo {
-  top: 32%;
-  left: 6%;
-} 
->>>>>>> Stashed changes
 }
 
 .bgport {
@@ -84,13 +67,7 @@
     "a b"
     "a c"
     "d d";
-    @media screen and (max-width: 950px) {
-      grid-template-columns: 20% 1fr;
-      grid-template-rows: 10% 60% 25%;
-      grid-template-areas:
-    "a b"
-    "a c"
-    "d d";
+    
     }
     .logo {
     position:relative;
@@ -98,16 +75,15 @@
     align-self: center;
     justify-self: center;
 
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 1080px) {
       position:relative;
       grid-area:b;
       align-self: center;
-    justify-self: center;
-        width: 80px;
-    height: 80px;
+      justify-self: center;
+      width: 80px;
+      height: 80px;
     }
   }
-}
 .choice {
   grid-area: b;
   display: grid;
@@ -115,7 +91,7 @@
   align-items: center;
   margin-left: 10%;
   
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1080px) {
     grid-area: a;
     align-items: end;
     margin-bottom: 50%;
@@ -150,25 +126,7 @@
   }
   }
 }
-.choice {
- grid-area: b;
- display: grid;
- justify-items:left;
- align-items: center;
- margin-left: 20%;
 
- ul{
-   display:flex;
-   justify-content: space-around;
-   width: 80%;
-   background: $color-5;
-   padding: 5px 20px 5px 20px;
-   border-radius: 10px;
-   input[type=radio] {transform: translate(-5px,1px)}
-  align-items: center;
-
- }
-}
 .swiper {
   width: 100%;
   margin-left: auto;
@@ -231,14 +189,7 @@
   object-fit: fill;
   overflow: hidden;
 }
-<<<<<<< Updated upstream
 .swiper-button-next,
 .swiper-button-prev {
   color: $blue;
 }
-=======
-.swiper-button-next, .swiper-button-prev {
-  color: $black;
-}
-
->>>>>>> Stashed changes

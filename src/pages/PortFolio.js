@@ -20,15 +20,12 @@ const PortFolio = () => {
   const [imageStore] = useState(PortfolioData);
   const [sortedArray, setSortedArray] = useState(PortfolioData);
   const [selectTri, setSelectTri] = useState("Tout");
-<<<<<<< Updated upstream
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );
   const [slideViewOne, setslideViewOne] = useState(2);
   const [slideViewTwo, setslideViewTwo] = useState(5);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-=======
->>>>>>> Stashed changes
   const tri = [
     "Tout",
     "Portrait",
@@ -38,7 +35,6 @@ const PortFolio = () => {
     "Bébé",
     "Mariage",
   ];
-<<<<<<< Updated upstream
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -67,13 +63,6 @@ const PortFolio = () => {
       height,
     };
   }
-=======
-  useEffect(() => {
-    filterArray(imageStore);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectTri]);
-
->>>>>>> Stashed changes
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -83,7 +72,6 @@ const PortFolio = () => {
     }
   };
   const filterArray = (array) => {
-<<<<<<< Updated upstream
     if (selectTri === "Tout") {
       setSortedArray(array);
     } else {
@@ -91,17 +79,6 @@ const PortFolio = () => {
     }
     shuffleArray(array);
   };
-=======
-     if (selectTri === "Tout") {
-       setSortedArray(array);
-     } else {
-       setSortedArray(array.filter((tri) => tri.cat.includes(selectTri)));
-     }
-    shuffleArray(array);
-  }
-  
-
->>>>>>> Stashed changes
 
   return (
     <main>
@@ -109,7 +86,6 @@ const PortFolio = () => {
         <Navigations />
         
         <SocialNetworks />
-<<<<<<< Updated upstream
 
         <div className="gridcase">
           <Logo />
@@ -131,29 +107,6 @@ const PortFolio = () => {
               })}
             </ul>
           </div>
-=======
-        
-        <div className="gridcase">
-          <div className="choice">
-          <ul>
-              {tri
-                .map((tri) => {
-              return (
-                <li key={tri}>
-                  <input
-                    type="radio"
-                    value={tri}
-                    id={tri}
-                    checked={tri === selectTri}
-                    onChange={(e) => setSelectTri(e.target.value)}
-                  />
-                  <label htmlFor={tri}>{tri}</label>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
->>>>>>> Stashed changes
           <Swiper
             style={{
               "--swiper-navigation-color": "#fff",
