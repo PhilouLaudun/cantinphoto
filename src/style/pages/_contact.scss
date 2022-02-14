@@ -34,7 +34,7 @@
     }
     @media screen and (max-width: 720px) {
       top: 65%;
-      left: 60%;
+      left: 40%;
       min-width: 150px;
       min-height: 150px;
     }
@@ -49,6 +49,7 @@
     }
   }
   .logo {
+    position: absolute;
     @media screen and (max-width: 1060px) {
       top: 2%;
       left: 45%;
@@ -79,21 +80,19 @@
     }
   }
   .contact-form {
-    margin: 13% 0 0 10%;
-    max-width: 50%;
+    margin: 18% 0 0 10%;
     position: relative;
     max-width: 350px;
-
-    @media screen and(max-width: 1200px) {
-      top: 10%;
+    @media screen and (min-width: 940px) and (max-width: 1060px ) {
+      margin: 20% 0 0 10%;
     }
-
-    @media screen and (max-width: 740px) {
-      top: 15%;
+    @media screen and (min-width: 540px) and (max-width: 940px ) {
+      margin: 27% 0 0 10%;
     }
-    @media screen and (max-width: 440px) {
-      //margin-left: 2rem;
+    @media screen and (max-width: 540px ) {
+      margin: 40% 0 0 10%;
     }
+  
     h2 {
       margin-bottom: 20px;
     }

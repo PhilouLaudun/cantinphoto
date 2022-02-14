@@ -12,7 +12,7 @@
         color: $blacksn;
       }
     }
-    @media screen and (max-width: 1080px){
+    @media screen and (max-width: 1200px){
       right: 40px;
       font-size: 1.5rem;
 
@@ -112,7 +112,7 @@
     align-items: center;
 
 
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 1080px) {
     display:grid;
     max-width:100px;
     height: 70%;

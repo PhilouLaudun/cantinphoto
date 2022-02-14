@@ -54,8 +54,23 @@ body {
 
 
 }
+h1 {
+  font-family: $font-2;
+}
+h2 {
+  font-family: $font-1;
+}
+h3 {
+  font-family: $font-1;
+}
+h4 {
+  font-family: $font-2;
+}
 main {
   position: relative;
+}
+p, ul, li {
+  font-family: $font-1;
 }
 .button {
   background: $color-3;
