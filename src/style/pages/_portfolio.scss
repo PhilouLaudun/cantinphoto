@@ -2,6 +2,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
+<<<<<<< Updated upstream
 
   .social-network {
     top: 1%;
@@ -36,6 +37,22 @@
       }
     }
   }
+=======
+  .social-network {
+    top: 1%;
+    ul { 
+     display: flex; 
+      a {
+      color: $blacksn;
+    }
+  }
+
+  }
+  .logo {
+  top: 32%;
+  left: 6%;
+} 
+>>>>>>> Stashed changes
 }
 
 .bgport {
@@ -133,6 +150,25 @@
   }
   }
 }
+.choice {
+ grid-area: b;
+ display: grid;
+ justify-items:left;
+ align-items: center;
+ margin-left: 20%;
+
+ ul{
+   display:flex;
+   justify-content: space-around;
+   width: 80%;
+   background: $color-5;
+   padding: 5px 20px 5px 20px;
+   border-radius: 10px;
+   input[type=radio] {transform: translate(-5px,1px)}
+  align-items: center;
+
+ }
+}
 .swiper {
   width: 100%;
   margin-left: auto;
@@ -195,7 +231,14 @@
   object-fit: fill;
   overflow: hidden;
 }
+<<<<<<< Updated upstream
 .swiper-button-next,
 .swiper-button-prev {
   color: $blue;
 }
+=======
+.swiper-button-next, .swiper-button-prev {
+  color: $black;
+}
+
+>>>>>>> Stashed changes
