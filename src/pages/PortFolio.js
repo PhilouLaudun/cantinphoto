@@ -13,13 +13,19 @@ import "swiper/scss/free-mode";
 import "swiper/scss/navigation";
 import "swiper/scss/thumbs";
 // import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { Controller, FreeMode, Navigation, Thumbs } from "swiper";
 
 const PortFolio = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [imageStore] = useState(PortfolioData);
   const [sortedArray, setSortedArray] = useState(PortfolioData);
   const [selectTri, setSelectTri] = useState("Tout");
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+  const [slideViewOne, setslideViewOne] = useState(2);
+  const [slideViewTwo, setslideViewTwo] = useState(5);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const tri = [
     "Tout",
     "Portrait",
@@ -29,11 +35,34 @@ const PortFolio = () => {
     "Bébé",
     "Mariage",
   ];
-  useEffect(() => {
-    filterArray(imageStore);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectTri]);
 
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    console.log ("hello")
+    filterArray(imageStore);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectTri,windowDimensions.width]);
+
+  function handleResize() {
+    setWindowDimensions(getWindowDimensions());
+    if (windowDimensions.width < 1024) {
+      setslideViewOne(1);
+      setslideViewTwo(3);
+      console.log(slideViewOne, slideViewTwo);
+    } else {
+      setslideViewOne(2);
+      setslideViewTwo(5);
+    }
+  }
+  function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    console.log("getdimension", width);
+    return {
+      width,
+      height,
+    };
+  }
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -43,15 +72,13 @@ const PortFolio = () => {
     }
   };
   const filterArray = (array) => {
-     if (selectTri === "Tout") {
-       setSortedArray(array);
-     } else {
-       setSortedArray(array.filter((tri) => tri.cat.includes(selectTri)));
-     }
+    if (selectTri === "Tout") {
+      setSortedArray(array);
+    } else {
+      setSortedArray(array.filter((tri) => tri.cat.includes(selectTri)));
+    }
     shuffleArray(array);
-  }
-  
-
+  };
 
   return (
     <main>
@@ -59,27 +86,26 @@ const PortFolio = () => {
         <Navigations />
         <Logo />
         <SocialNetworks />
-        
+
         <div className="gridcase">
           <div className="choice">
-          <ul>
-              {tri
-                .map((tri) => {
-              return (
-                <li key={tri}>
-                  <input
-                    type="radio"
-                    value={tri}
-                    id={tri}
-                    checked={tri === selectTri}
-                    onChange={(e) => setSelectTri(e.target.value)}
-                  />
-                  <label htmlFor={tri}>{tri}</label>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+            <ul>
+              {tri.map((tri) => {
+                return (
+                  <li key={tri}>
+                    <input
+                      type="radio"
+                      value={tri}
+                      id={tri}
+                      checked={tri === selectTri}
+                      onChange={(e) => setSelectTri(e.target.value)}
+                    />
+                    <label htmlFor={tri}>{tri}</label>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
           <Swiper
             style={{
               "--swiper-navigation-color": "#fff",
@@ -88,7 +114,7 @@ const PortFolio = () => {
             loop={true}
             spaceBetween={10}
             navigation={true}
-            slidesPerView={2}
+            slidesPerView={slideViewOne}
             thumbs={{ swiper: thumbsSwiper }}
             modules={[FreeMode, Navigation, Thumbs]}
             className="mySwiper2"
@@ -103,7 +129,7 @@ const PortFolio = () => {
             onSwiper={setThumbsSwiper}
             //loop={true}
             spaceBetween={10}
-            slidesPerView={4}
+            slidesPerView={slideViewTwo}
             freeMode={true}
             watchSlidesProgress={true}
             modules={[FreeMode, Navigation, Thumbs]}

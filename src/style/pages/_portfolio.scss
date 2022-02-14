@@ -4,18 +4,35 @@
   height: 100vh;
   .social-network {
     top: 1%;
-    ul { 
-     display: flex; 
+    right: 5%;
+    ul {
+      display: flex;
       a {
-      color: $blacksn;
+        color: $blacksn;
+      }
     }
   }
-
-  }
   .logo {
-  top: 32%;
-  left: 6%;
-} 
+    top: 32%;
+    left: 6%;
+  }
+  .navigation {
+    @media screen and (max-width: 1024px) {
+      font-size: 0.9rem;
+      line-height: 25px;
+      top: 0.5rem;
+      left: 0.3rem;
+      &::before {
+        height: 200px;
+        width: 200px;
+        top: -80px;
+        left: -80px;
+      }
+      .navactive {
+        font-size: 1.3rem;
+      }
+    }
+  }
 }
 
 .bgport {
@@ -48,23 +65,24 @@
     "d d";
 }
 .choice {
- grid-area: b;
- display: grid;
- justify-items:left;
- align-items: center;
- margin-left: 20%;
-
- ul{
-   display:flex;
-   justify-content: space-around;
-   width: 80%;
-   background: $color-5;
-   padding: 5px 20px 5px 20px;
-   border-radius: 10px;
-   input[type=radio] {transform: translate(-5px,1px)}
+  grid-area: b;
+  display: grid;
+  justify-items: left;
   align-items: center;
+  margin-left: 10%;
 
- }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    background: $color-5;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    input[type="radio"] {
+      transform: translate(-5px, 1px);
+    }
+    align-items: center;
+  }
 }
 .swiper {
   width: 100%;
@@ -127,7 +145,7 @@
   object-fit: fill;
   overflow: hidden;
 }
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   color: $blue;
 }
-

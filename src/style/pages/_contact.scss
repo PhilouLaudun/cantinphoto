@@ -64,11 +64,14 @@
   .navigation {
     @media screen and (max-width: 1060px) {
       font-size: 0.9rem;
+            line-height: 25px;
+            top: 0.5rem;
+      left: 0.3rem;
       &::before {
         height: 200px;
         width: 200px;
-        top: -60px;
-        left: -70px;
+        top: -80px;
+        left: -80px;
       }
       .navactive {
         font-size: 1.3rem;

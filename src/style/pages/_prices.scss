@@ -3,31 +3,34 @@
   width: 100vw;
   height: 100vh;
   .logo {
-      @media screen and (max-width: 1060px){
-      top:2%;
-      left:45%;
+    @media screen and (max-width: 1060px) {
+      top: 2%;
+      left: 45%;
       width: 100px;
-    height: 100px;
+      height: 100px;
     }
   }
   .social-network {
     @media screen and (max-width: 1060px) {
-    right: 15%;}
+      right: 15%;
+    }
   }
   .navigation {
     @media screen and (max-width: 1060px) {
       font-size: 0.9rem;
+      line-height: 25px;
+      top: 0.5rem;
+      left: 0.3rem;
       &::before {
         height: 200px;
         width: 200px;
         top: -60px;
-        left: -70px;
+        left: -60px;
       }
       .navactive {
         font-size: 1.3rem;
       }
     }
-    
   }
   .bg {
     animation: slide 14s linear infinite alternate;
