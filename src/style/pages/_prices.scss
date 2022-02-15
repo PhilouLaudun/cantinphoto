@@ -3,16 +3,16 @@
   width: 100vw;
   height: 100vh;
   @media screen and (max-width: 1100px) {
-          overflow: auto;;
+    overflow: auto;
   }
-  
+
   .logo {
     position: absolute;
-     width: 150px;
-      height: 150px;
+    top: 2%;
+    left: 45%;
+    width: 150px;
+    height: 150px;
     @media screen and (max-width: 1100px) {
-      top: 2%;
-      left: 45%;
       width: 120px;
       height: 120px;
     }
@@ -69,7 +69,7 @@
   }
   .content {
     position: absolute;
-    top: 2%;
+    top: 20%;
     left: 10%;
     right: 10%;
     width: 85%;
@@ -79,7 +79,6 @@
 
     @media screen and (max-width: 1100px) {
       top: 20%;
-
     }
   }
 }
