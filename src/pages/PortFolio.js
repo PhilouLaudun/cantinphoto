@@ -23,9 +23,8 @@ const PortFolio = () => {
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );
-  const [slideViewOne, setslideViewOne] = useState(2);
-  const [slideViewTwo, setslideViewTwo] = useState(5);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [slideViewOne, setslideViewOne] = useState(1);
+  const [slideViewTwo, setslideViewTwo] = useState(3);
   const tri = [
     "Tout",
     "Portrait",
@@ -35,21 +34,23 @@ const PortFolio = () => {
     "Bébé",
     "Mariage",
   ];
-
   useEffect(() => {
+    handleResize()
     window.addEventListener("resize", handleResize);
-    console.log ("hello")
+    return () => window.removeEventListener('resize', handleResize);
+  }, [windowDimensions.width]);
+  
+  useEffect(() => {
     filterArray(imageStore);
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectTri,windowDimensions.width]);
+  }, [selectTri]);
 
+  
   function handleResize() {
     setWindowDimensions(getWindowDimensions());
     if (windowDimensions.width < 1024) {
       setslideViewOne(1);
       setslideViewTwo(3);
-      console.log(slideViewOne, slideViewTwo);
     } else {
       setslideViewOne(2);
       setslideViewTwo(5);
@@ -57,7 +58,6 @@ const PortFolio = () => {
   }
   function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
-    console.log("getdimension", width);
     return {
       width,
       height,
@@ -79,7 +79,7 @@ const PortFolio = () => {
     }
     shuffleArray(array);
   };
-
+  
   return (
     <main>
       <div className="portfolio  bgport">

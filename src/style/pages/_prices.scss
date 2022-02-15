@@ -8,11 +8,13 @@
   
   .logo {
     position: absolute;
+     width: 150px;
+      height: 150px;
     @media screen and (max-width: 1060px) {
       top: 2%;
       left: 45%;
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
     }
   }
   .social-network {
@@ -22,7 +24,7 @@
   }
   .navigation {
     @media screen and (max-width: 1060px) {
-      font-size: 0.9rem;
+      font-size: 1rem;
       line-height: 25px;
       top: 0.5rem;
       left: 0.3rem;

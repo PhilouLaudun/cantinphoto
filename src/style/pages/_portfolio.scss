@@ -20,8 +20,8 @@
   }
 
   .navigation {
-    @media screen and (max-width: 1024px) {
-      font-size: 0.9rem;
+    @media screen and (max-width: 1080px) {
+      font-size: 1rem;
       line-height: 25px;
       top: 0.5rem;
       left: 0.3rem;
@@ -96,7 +96,7 @@
     align-items: end;
     margin-bottom: 50%;
     margin-left: 10px;
-    z-index: 10;
+    z-index: 1;
   }
 
   ul {

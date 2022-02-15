@@ -4,6 +4,8 @@
   min-width: 400px;
   .logo {
     position: absolute;
+        width: 150px;
+    height: 150px;
     @media screen and (max-width: 980px) {
       bottom: 10%;
       right: 10%;
@@ -15,7 +17,7 @@
   }
     .navigation {
     @media screen and (max-width: 980px) {
-      font-size: 0.9rem;
+      font-size: 1rem;
             line-height: 25px;
             top: 0.5rem;
       left: 0.3rem;
