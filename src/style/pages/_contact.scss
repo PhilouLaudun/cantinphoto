@@ -38,6 +38,12 @@
       min-width: 150px;
       min-height: 150px;
     }
+    @media screen and (max-width: 500px) {
+      top: 65%;
+      left: 50%;
+      min-width: 150px;
+      min-height: 150px;
+    }
 
     @keyframes flash {
       0% {
@@ -50,8 +56,8 @@
   }
   .logo {
     position: absolute;
-     width: 150px;
-      height: 150px;
+    width: 150px;
+    height: 150px;
     @media screen and (max-width: 1060px) {
       top: 2%;
       left: 45%;
@@ -67,8 +73,8 @@
   .navigation {
     @media screen and (max-width: 1060px) {
       font-size: 1rem;
-            line-height: 25px;
-            top: 0.5rem;
+      line-height: 25px;
+      top: 0.5rem;
       left: 0.3rem;
       &::before {
         height: 200px;
@@ -85,16 +91,16 @@
     margin: 18% 0 0 10%;
     position: relative;
     max-width: 350px;
-    @media screen and (min-width: 940px) and (max-width: 1060px ) {
+    @media screen and (min-width: 940px) and (max-width: 1060px) {
       margin: 20% 0 0 10%;
     }
-    @media screen and (min-width: 540px) and (max-width: 940px ) {
+    @media screen and (min-width: 540px) and (max-width: 940px) {
       margin: 27% 0 0 10%;
     }
-    @media screen and (max-width: 540px ) {
+    @media screen and (max-width: 540px) {
       margin: 40% 0 0 10%;
     }
-  
+
     h2 {
       margin-bottom: 20px;
     }
