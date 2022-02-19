@@ -1,29 +1,9 @@
-.logo {
-  bottom: 1%;
-}
-.social-network {
-  @media screen and (min-width: 1060px) and (max-width : 1300px) {
-          right: 5%;
-  }
-}
+// style composant card
 .card {
+  // definition de l'affichage de la carte et des dimensions en largeur maximale et minimale
   flex: 1 0 25%;
   min-width: 260px;
   max-width: 400px;
-  //z-index: 10;
-  overflow: visible;
-  &:hover {
-    border: thick double #32a1ce;
-    animation: secouer 2s;
-    box-shadow: 10px 5px 5px $color-4;
-    @keyframes secouer {
-      // 0% {transform: translateX(0px) translateY(0) };
-      50% {
-        transform: translateX(10px) translateY(-10px);
-      }
-      //100% {transform: translateX(0px) translateY(0)};
-    }
-  }
   height: 350px;
   background: $color-1;
   border-radius: 35px;
@@ -32,7 +12,18 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-
+  //animation au survol de la souris
+  &:hover {
+    border: thick double $color-6;
+    animation: secouer 2s;
+    box-shadow: 10px 5px 5px $color-4;
+    @keyframes secouer {
+      50% {
+        transform: translateX(10px) translateY(-10px);
+      }
+    }
+  }
+  // style de la photo
   img {
     width: 100%;
     height: 70%;
@@ -50,15 +41,17 @@
     font-size: 1.6rem;
     font-weight: 800;
     width: 98%;
-    //animation: apparition 2s;
+    animation: apparition 2s;
   }
   .card-text {
+    // style de la zone d'affichage du texte et définition de la grille d'affichage
     background: $white;
     display: grid;
     grid-template-columns: 75% 25%;
     grid-template-rows: 100px;
     grid-template-areas: "a b";
-
+    
+    // définition du style du texte d'information et animation au chargement de la page
     h2 {
       grid-area: b;
       display: flex;
@@ -70,11 +63,11 @@
       height: 100%;
       animation: apparition 4s;
 
-      @media screen and (min-width: 1060px) and (max-width : 1300px) {
-          font-size: 1rem;
+      @media screen and (min-width: 1060px) and (max-width: 1300px) {
+        font-size: 1rem;
       }
-       @media screen and (max-width: 1060px){
-          font-size: 1.2rem;
+      @media screen and (max-width: 1060px) {
+        font-size: 1.2rem;
       }
 
       @keyframes apparition {
@@ -86,6 +79,7 @@
         }
       }
     }
+    // définition du style du prix et animation au chargement de la page
     h3 {
       grid-area: a;
       display: flex;

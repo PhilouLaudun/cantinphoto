@@ -1,15 +1,17 @@
+// style page Portfolio
 .portfolio {
+  //on se cale sur l'ensemble du viewport
   position: absolute;
   width: 100vw;
   height: 100vh;
-
+// on redefinit pour cette page l'emplacement des icones, leur orientation et leur couleur des réseaux sociaux et la taille en mode responsive
   .social-network {
     top: 1%;
     right: 3%;
     ul {
-      display: flex;
+      display: flex; // mode en ligne
       a {
-        color: $blacksn;
+        color: $blacksn; // couleur permettant de les voir sur le fond sombre
       }
     }
     @media screen and (max-width: 1200px){
@@ -18,7 +20,7 @@
 
     }
   }
-
+//on redefinit pour cette page la dimension de la navigation en mode responsive
   .navigation {
     @media screen and (max-width: 1080px) {
       font-size: 1rem;
@@ -37,7 +39,7 @@
     }
   }
 }
-
+// affichage et animation du fond de la page 
 .bgport {
   background: linear-gradient(-45deg, $color-2, $color-4, $color-5);
   background-size: 400% 400%;
@@ -54,6 +56,7 @@
     }
   }
 }
+// definition de la grille d'affichage des slides
 .gridcase {
   display: grid;
   height: 100%;
@@ -69,36 +72,38 @@
     "d d";
     
     }
+    // positionnement du logo pour cette page et mode responsive
     .logo {
     position:relative;
-    grid-area:a;
+    grid-area:a; // sur le coté dla page
     align-self: center;
     justify-self: center;
 
     @media screen and (max-width: 1080px) {
       position:relative;
-      grid-area:b;
+      grid-area:b;// sur le haut de la page 
       align-self: center;
       justify-self: center;
       width: 80px;
       height: 80px;
     }
   }
+  // positionnement de la barre des boutons radio  et mode responsive
 .choice {
-  grid-area: b;
+  grid-area: b; // en haut de page
   display: grid;
   justify-items: left;
   align-items: center;
   margin-left: 10%;
   
   @media screen and (max-width: 1080px) {
-    grid-area: a;
+    grid-area: a;// sur le coté de la page
     align-items: end;
     margin-bottom: 50%;
     margin-left: 10px;
     z-index: 1;
   }
-
+// mise en forme des boutons radio de la barre en fonction de sa position et mode responsive
   ul {
     display: flex;
     justify-content: space-around;
@@ -126,7 +131,7 @@
   }
   }
 }
-
+// mise en forme des slides et modification des paramètre par défaut du composant chargé
 .swiper {
   width: 100%;
   margin-left: auto;
@@ -135,13 +140,9 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-
   display: flex;
   justify-content: center;
-  //align-items: center;
+  
 }
 .swiper-slide img {
   display: block;

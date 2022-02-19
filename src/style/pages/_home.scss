@@ -1,10 +1,13 @@
+// style page Accueil
 .home {
+  //on se cale sur l'ensemble du viewport et definit la largeur minimale à 400px
   height: 100vh;
   width: 100vw;
   min-width: 400px;
+  // on redefinit pour cette page l'emplacement du logo en mode responsive
   .logo {
     position: absolute;
-        width: 150px;
+    width: 150px;
     height: 150px;
     @media screen and (max-width: 980px) {
       bottom: 10%;
@@ -15,15 +18,18 @@
       right: 8%;
     }
   }
-   .social-network {
+  // on redefinit pour cette page l'emplacement des icones des réseaux sociaux en mode responsive
+  .social-network {
     @media screen and (max-width: 980px) {
-    right: 10%;}
+      right: 10%;
+    }
   }
-    .navigation {
+  //on redefinit pour cette page la dimension de la navigation en mode responsive
+  .navigation {
     @media screen and (max-width: 980px) {
       font-size: 1rem;
-            line-height: 25px;
-            top: 0.5rem;
+      line-height: 25px;
+      top: 0.5rem;
       left: 0.3rem;
       &::before {
         height: 200px;
@@ -35,9 +41,8 @@
         font-size: 1.5rem;
       }
     }
-    
   }
-
+  // affichage de l'image de fond de la page et positionnement responsive
   .bg-image {
     position: absolute;
     top: 0;
@@ -55,7 +60,7 @@
       background-position: 25%;
     }
   }
-
+  // mise en forme du contenu de la page
   .home-main {
     display: grid;
     align-items: center;
@@ -64,27 +69,25 @@
     width: auto;
     height: 100%;
     overflow: hidden;
-
+    // mise en forme des éléments àafficher
     .main-content {
       user-select: none;
       justify-items: center;
       text-align: center;
-      font-family: $font-1;
       color: $color-4;
       line-height: 100px;
-      width:85%;
+      width: 85%;
       left: 0;
       right: 0;
       margin-left: auto;
       margin-right: auto;
-      
-
+      // Nom : animation et taille de la police en mode responsive
       h1 {
         font-size: 5rem;
         animation: fadeIn 3s;
-         @media screen and (max-width: 980px) {
-            font-size: 3rem;
-    }
+        @media screen and (max-width: 980px) {
+          font-size: 3rem;
+        }
 
         @keyframes fadeIn {
           from {
@@ -96,14 +99,14 @@
           }
         }
       }
+      // Qualite : animation et taille de la police en mode responsive
       h2 {
-    
         font-size: 3em;
         font-weight: 100;
         animation: fadeIn 6s;
         @media screen and (max-width: 980px) {
-            font-size: 2em;
-    }
+          font-size: 2em;
+        }
 
         @keyframes fadeIn {
           from {
@@ -114,10 +117,9 @@
             opacity: 3;
           }
         }
-
-
       }
     }
+    // Thèmes : animation,couleur, taille et position de la police en mode responsive
     h3 {
       position: absolute;
       text-align: center;
@@ -126,7 +128,7 @@
       right: 0;
       margin-left: auto;
       margin-right: auto;
-    
+
       color: $color-1;
       font-size: 1.5rem;
       font-weight: bold;
@@ -137,7 +139,7 @@
         font-size: 1rem;
         width: 80%;
       }
-       @media screen and (max-width: 500px) {
+      @media screen and (max-width: 500px) {
         bottom: 15%;
         font-size: 1rem;
         width: 50%;

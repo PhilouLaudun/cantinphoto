@@ -7,11 +7,16 @@ import ContactForm from '../componants/ContactForm'
 const Contact = () => {
   return (
     <main>
+      {/*page principale */}
       <div className="contact">
+        {/*composants : logo, navigation, réseaux sociaux*/}
         <Navigations />
         <Logo />
         <SocialNetworks />
+        {/*Contenu de la page */}
+        {/*Formulaire */}
         <ContactForm />
+        {/* Adresse, téléphone, email */}
         <div className="contact-infos">
           <div className="address">
             <div className="content">

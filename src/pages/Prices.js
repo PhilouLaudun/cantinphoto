@@ -7,13 +7,17 @@ import SocialNetworks from '../componants/SocialNetworks';
 const Prices = () => {
   return (
     <main>
+      {/*page principale */}
       <div className="prestation">
+        {/*composants : logo, navigation, réseaux sociaux*/}
         <Navigations />
         <Logo />
         <SocialNetworks />
+        {/*fond animé */}
         <div className="bg"></div>
         <div className="bg bg2"></div>
         <div className="bg bg3"></div>
+        {/*Contenu de la page */}
         <div className="content">
           <Carte carteNumber={0} />
           <Carte carteNumber={1} />

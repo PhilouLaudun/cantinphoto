@@ -1,45 +1,49 @@
 import React from "react";
 import { useState } from "react";
 
-const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [company, setCompany] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
+const ContactForm = () => { // formulaire de contact
+  const [name, setName] = useState(""); // variable contenant le nom de la personne envoyant le message
+  const [company, setCompany] = useState(""); // variable contenant le nom de la société de la personne envoyant le message
+  const [phone, setPhone] = useState(""); // variable contenant le numéro de téléphone de la personne envoyant le message
+  const [email, setEmail] = useState(""); // variable contenant l'email de la personne envoyant le message
+  const [message, setMessage] = useState(""); //variable contenant le message de la personne envoyant le message
+  // quand on click sur le bouton envoyé
   const handleSubmit = (e) => {
     e.preventDefault();
-    let nameS = document.getElementById("name");
-    let emailS = document.getElementById("email");
-    let messageS = document.getElementById("message");
-    let formMess = document.querySelector(".form-message");
+    let nameS = document.getElementById("name"); // récupére la localisation du champ obligatoire name
+    let emailS = document.getElementById("email"); // récupére la localisation du champ obligatoire  email
+    let messageS = document.getElementById("message"); // récupére la localisation du champ obligatoire message
+    let formMess = document.querySelector(".form-message"); // récupére la localisation de l'élément servant à afficher les messages d'erreur
 
     const isEmail = () => {
-      let isMail = document.getElementById("not-mail");
-      let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      let isMail = document.getElementById("not-mail"); // récupére la localisation indiquant un email non valide
+      let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; // régle concernant la vlaidation d'un email
 
       if (email.match(regex)) {
-        isMail.style.display = "none";
-        return true;
+        // si email conforme
+        isMail.style.display = "none"; // cache le message
+        return true; // renvoi true pour email valide
       } else {
-        isMail.style.display = "block";
-        isMail.style.animation = "dongle 1s";
+        isMail.style.display = "block"; // affiche le message d'email non valide
+        isMail.style.animation = "dongle 1s"; // anime le message
+        // attend une minute avant d'effacer le messager
         setTimeout(() => {
           isMail.style.animation = "none";
         }, 1000);
-        return false;
+        return false; //renvoi faux pour email valide
       }
     };
-    
+
     if (name && isEmail() && message) {
-      const templateId = 'template_19udd2q';
-      
-      nameS.classList.remove("red");
-      emailS.classList.remove("red");
-      messageS.classList.remove("red");
+      // si tous les champs obligatoires sont remplis
+      const templateId = "template_19udd2q"; // variable contenant le numéro d'identification pour emailjs
+
+      nameS.classList.remove("red"); // supprime la couleur rouge pour le nom si le champs n'a pas été rempli avant
+      emailS.classList.remove("red"); // supprime la couleur rouge pour le nom si le champs n'a pas été rempli avant
+      messageS.classList.remove("red"); // supprime la couleur rouge pour le nom si le champs n'a pas été rempli avant
 
       sendFeedback(templateId, {
+        //envoi le message: numero d'identification et les variables
         name,
         company,
         phone,
@@ -47,53 +51,58 @@ const ContactForm = () => {
         message,
       });
     } else {
-      formMess.innerHTML = "Merci de remplir correctement les champs requis *";
-      formMess.style.background = "rgb(253, 87, 87)";
-      formMess.style.opacity = "1";
+      formMess.innerHTML = "Merci de remplir correctement les champs requis *"; // charge le message d'erreur
+      formMess.style.background = "{$red}"; // met le fond du message en rouge
+      formMess.style.opacity = "1"; // affiche le message
+      //attend 2s avant d'effacer le message
       setTimeout(() => {
-       formMess.style.opacity = "0"; 
+        formMess.style.opacity = "0";
       }, 2000);
 
       if (!name) {
-        nameS.classList.add("error");
+        // si nom non rempli
+        nameS.classList.add("error"); // ajoute le syle error au message affiché par défaut pour le nom
       }
       if (!email) {
-        emailS.classList.add("error");
+        emailS.classList.add("error"); // ajoute le syle error au message affiché par défaut pour l'email
       }
       if (!message) {
-        messageS.classList.add("error");
+        messageS.classList.add("error"); // ajoute le syle error au message affiché par défaut pour le message
       }
     }
   };
 
   const sendFeedback = (templateId, variables) => {
-    let formMess = document.querySelector(".form-message");
-    
-    window.emailjs
-      .send('service_3b23au8', templateId, variables)
-      .then((res) => {
-        formMess.innerHTML =
-          "Message envoyé ! Je vous contacterez dès que possible.";
-        formMess.style.background = "#00c1ec";
-        formMess.style.opacity = "1";
+    let formMess = document.querySelector(".form-message"); // récupére la localisation de l'élément servant à afficher les messages d'erreur
 
-        document.getElementById("name").classList.remove("error");
-        document.getElementById("email").classList.remove("error");
-        document.getElementById("message").classList.remove("error");
-        setName("");
-        setCompany("");
-        setPhone("");
-        setEmail("");
-        setMessage("");
+    window.emailjs // utilise le service eamiljs
+      .send("service_3b23au8", templateId, variables) // envoi le message
+      .then((res) => {
+        // si envoi OK
+        formMess.innerHTML =
+          "Message envoyé ! Je vous contacterez dès que possible."; // charge le message
+        formMess.style.background = "{$blue}"; // met le fond du message en bleu
+        formMess.style.opacity = "1"; // affiche le message
+
+        document.getElementById("name").classList.remove("error"); // enleve le syle error au message affiché par défaut pour le nom
+        document.getElementById("email").classList.remove("error"); // enleve le syle error au message affiché par défaut pour l'email
+        document.getElementById("message").classList.remove("error"); // enleve le syle error au message affiché par défaut pour le message
+        setName(""); // efface le champ
+        setCompany(""); // efface le champ
+        setPhone(""); // efface le champ
+        setEmail(""); // efface le champ
+        setMessage(""); // efface le champ
+        // attend 5s avant d'effacer le messsage
         setTimeout(() => {
           formMess.style.opacity = "0";
         }, 5000);
       })
       .catch((err) => {
-        console.log("failed...", err);
-        formMess.innerHTML = "Une erreur s'est produite, veuillez réessayer.";
-        formMess.style.background = "rgb(253, 87, 87)";
-        formMess.style.opacity = "1";
+        // si erreur d'envoi
+        formMess.innerHTML = "Une erreur s'est produite, veuillez réessayer."; // charge le message
+        formMess.style.background = "$red"; // met le fond du message en rouge
+        formMess.style.opacity = "1"; // affiche le message
+        // attend 2s avant d'effacer le messsage
         setTimeout(() => {
           formMess.style.opacity = "0";
         }, 2000);
@@ -102,7 +111,9 @@ const ContactForm = () => {
 
   return (
     <form className="contact-form">
+      {/* zone principale du formulaire*/}
       <h2>contactez-moi</h2>
+      {/* zone principale des champs*/}
       <div className="form-content">
         <input
           type="text"
@@ -112,7 +123,6 @@ const ContactForm = () => {
           onChange={(e) => setName(e.target.value)}
           placeholder="nom *"
           value={name}
-          
         />
         <input
           type="text"
@@ -157,6 +167,7 @@ const ContactForm = () => {
         value="envoyer"
         onClick={handleSubmit}
       />
+      {/* message caché et affiché au besoin pour les champs obligatoire non saisis et les envois*/}
       <div className="form-message"></div>
     </form>
   );

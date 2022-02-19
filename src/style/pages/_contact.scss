@@ -1,10 +1,14 @@
+
+// style page Accueil
 .contact {
+  //on se cale sur l'ensemble du viewport
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: $color-1;
+  //definition du fond de l'écran
   background-image: linear-gradient(200deg, $color-3 0%, $color-4 300%);
 
+  // image de fond animée et mode responsive (positionnement et taille)
   &::before {
     content: "";
     position: absolute;
@@ -54,6 +58,7 @@
       }
     }
   }
+  // on redefinit pour cette page l'emplacement du logo et mode responsive
   .logo {
     position: absolute;
     width: 150px;
@@ -65,11 +70,13 @@
       height: 130px;
     }
   }
+  // on redefinit pour cette page l'emplacement des icones des réseaux sociaux en mode responsive
   .social-network {
     @media screen and (max-width: 1060px) {
       right: 10%;
     }
   }
+   //on redefinit pour cette page la dimension de la navigation en mode responsive
   .navigation {
     @media screen and (max-width: 1250px) {
       font-size: 1rem;
@@ -87,6 +94,7 @@
       }
     }
   }
+  // definition du style du formulaire et mode responsive
   .contact-form {
     margin: 15% 0 0 10%;
     position: relative;
@@ -100,19 +108,18 @@
     @media screen and (max-width: 540px) {
       margin: 40% 0 0 10%;
     }
-
+    // positionnement du message en en-tête du formulaire
     h2 {
       margin-bottom: 20px;
     }
-
+    // style du contenu de l azone de saisie du formulaire
     .form-content {
       display: grid;
       grid-template-rows: repeat(4, 1fr) 100px;
-
+      // style des champs de saisie et mode responsive
       input,
       textarea {
         background: none;
-        font-family: $font-1;
         font-size: 1.2rem;
         border-bottom: 1px solid $color-2;
 
@@ -120,6 +127,7 @@
           font-size: 1.5rem;
         }
       }
+      // style spécifique au champs input et mode responsive
       input {
         padding: 24px 0 12px;
         width: 100%;
@@ -129,6 +137,7 @@
           padding: 12px 0 6px;
         }
       }
+      // style spécifique au champs mail et mode responsive
       .email-content {
         position: relative;
         width: 100%;
@@ -137,9 +146,9 @@
         @media screen and (max-width: 540px) {
           width: 75%;
         }
-
+        // style pour message email invalide animé et mode responsive
         #not-mail {
-          display: none;
+          display: none; //non affiché au départ
           position: absolute;
           top: 8px;
           color: $red;
@@ -185,6 +194,7 @@
           border: none;
         }
       }
+      // style de la zone du message et mode responsive
       textarea {
         resize: none;
         padding: 24px 0;
@@ -195,9 +205,11 @@
         }
       }
     }
+    // style des champs obligatoires non remplies
     .error::placeholder {
       color: blueviolet;
     }
+    // style du message en bas du formulaire pour envoi et zones à remplir
     .form-message {
       margin-top: 10px;
       padding: 12px;
@@ -206,10 +218,10 @@
       transition: 0.3s ease;
       color: $color-1;
       border-radius: 4px;
-      box-shadow: 0 0 2px rgba(51, 51, 51, 0.3);
+      box-shadow: 0 0 10px $color-4;
     }
   }
-
+// style de la zone de l'affichage de l'adresse, du telephone et du mail et mode responsive
   .contact-infos {
     position: absolute;
     bottom: 0%;
@@ -242,7 +254,7 @@
         "b"
         "c";
     }
-
+      // style du titre de l'item et mode responsive
     h4 {
       color: $color-4;
       font-size: 1.8rem;
@@ -255,6 +267,7 @@
         font-size: 1rem;
       }
     }
+    //style des infos et mode responsive
     p {
       font-size: 1.25rem;
       @media screen and (max-width: 960px) {
@@ -264,6 +277,7 @@
         font-size: 0.7rem;
       }
     }
+    // animation des infos telephone et mail
     .email .content p,
     .phone .content p {
       transition: 0.25s;
@@ -271,6 +285,7 @@
         transform: translateX(5px);
       }
     }
+    // défintion des zones d'affcihages des infos de contact
     .address {
       width: auto;
       grid-area: a;

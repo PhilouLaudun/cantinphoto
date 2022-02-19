@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SocialNetworks = () => {
+const SocialNetworks = () => { //affichage des icones des réseaux sociaux
 
     return (
         <div className="social-network">

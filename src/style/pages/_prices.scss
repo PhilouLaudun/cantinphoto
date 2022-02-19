@@ -1,11 +1,12 @@
+// style page Prestation
 .prestation {
+  //on se cale sur l'ensemble du viewport
   position: absolute;
   width: 100vw;
   height: 100vh;
-  @media screen and (max-width: 1100px) {
-    overflow: auto;
-  }
-
+  overflow-y: auto; // autorise le scroll vertical en mode auto
+  overflow-x: hidden;// inhibe le scroll horizontal
+// on redefinit pour cette page l'emplacement du logo et mode responsive (en haut de page)
   .logo {
     position: absolute;
     top: 2%;
@@ -17,11 +18,13 @@
       height: 120px;
     }
   }
+// on redefinit pour cette page l'emplacement des icones des réseaux sociaux en mode responsive
   .social-network {
     @media screen and (max-width: 1100px) {
-      right: 15%;
+      right: 20%;
     }
   }
+  //on redefinit pour cette page la dimension de la navigation en mode responsive
   .navigation {
     @media screen and (max-width: 1060px) {
       font-size: 1rem;
@@ -39,6 +42,7 @@
       }
     }
   }
+  // affichage du fond animé de la page
   .bg {
     animation: slide 14s linear infinite alternate;
     background-image: linear-gradient(-60deg, $color-3 50%, $color-2 20%);
@@ -67,6 +71,7 @@
       transform: translateX(25%);
     }
   }
+  // mise en forme du contenu de la page 
   .content {
     position: absolute;
     top: 20%;
@@ -76,9 +81,5 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
-    @media screen and (max-width: 1100px) {
-      top: 20%;
-    }
   }
 }

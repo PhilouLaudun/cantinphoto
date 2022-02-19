@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { PriceData } from "../data/priceData";
 
-const Carte = (props) => {
-  const [currentCard] = useState(PriceData);
-  const carte = currentCard[props.carteNumber];
+const Carte = (props) => { // carte d'affichage des prestations
+  const [currentCard] = useState(PriceData); // tableau de cartes à afficher, fichier externe en json
+  const carte = currentCard[props.carteNumber];// tableau contenant la carte à afficher, index passé en props
 
   return (
     <div className="card">
