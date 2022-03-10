@@ -38,15 +38,15 @@
     }
     @media screen and (max-width: 720px) {
       top: 65%;
-      left: 40%;
-      min-width: 150px;
-      min-height: 150px;
+      left: 60%;
+      width: 140px;
+      height: 140px;
     }
     @media screen and (max-width: 500px) {
       top: 65%;
       left: 50%;
-      min-width: 150px;
-      min-height: 150px;
+      width: 140px;
+      height: 140px;
     }
 
     @keyframes flash {
